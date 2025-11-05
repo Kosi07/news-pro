@@ -11,16 +11,16 @@ const MajorNews = () => {
         <Image 
             src={LFCvsRMA}
             alt=''
-            width={350}
-            height={350}
+            width={1000}
+            height={1000}
             className='w-full h-auto rounded-lg'
         />
         <div className='flex flex-row gap-3'>
             <Image 
                 src={LFCwinRMA}
                 alt=''
-                width={200}
-                height={200}
+                width={500}
+                height={500}
                 className='w-4/10 h-auto rounded-lg'
             />
             <article className='flex flex-col gap-5'>
