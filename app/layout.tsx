@@ -14,7 +14,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`antialiased`}
+        className={`antialiased flex flex-col gap-8 items-center px-2`}
       >
         {children}
       </body>
