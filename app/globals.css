@@ -22,7 +22,11 @@ body {
   color: var(--foreground);
 } */
 
+*{
+  box-sizing: border-box;
+}
+
 body{
-  background-image: linear-gradient(to bottom, black, black);
-  color: white;
+  background: black;
+  color: #a09c9c;
 }
