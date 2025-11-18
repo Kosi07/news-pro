@@ -5,7 +5,7 @@ import LFCwinRMA from '@/public/LFCwinRMA.jpg'
 const MajorNews = () => {
   return (
     <section id='Major News' className='flex flex-col gap-2 pb-8'>
-        <h2 className='font-extrabold text-white text-3xl font-serif'>
+        <h2 className='font-extrabold text-white text-3xl'>
             LIVERPOOL SWEEPS THE FLOOR WITH REAL MADRID!
         </h2>
         <Image 

@@ -57,7 +57,7 @@ export default function Home() {
     <>
       <header className='w-full'>
         <Navbar />
-        <div className='mt-2 w-full h-9 bg-linear-to-r from-black to-gray-900'></div>
+        <div className='mt-2 w-full h-9 bg-linear-to-r from-black to-gray-900'>{Date().slice(0, 10)}</div>
       </header>
 
       <main>
@@ -66,7 +66,7 @@ export default function Home() {
         {newsArray.map((news) => <News key={news.summary} headline={news.headline} summary={news.summary} imgSrc={news.imgSrc} imgAlt={news.imgAlt} imgLeft={news.imgLeft} />)}
       </main>
 
-      <footer>Footer</footer>
+      <footer>&copy; News Pro {new Date().getFullYear()}</footer>
     </>
   );
 }
