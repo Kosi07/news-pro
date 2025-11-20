@@ -1,8 +1,8 @@
-import Navbar from '@/components/Navbar';
 import MajorNews from '@/components/MajorNews';
 import News from '@/components/News';
 
 import elonMusk from '@/public/elonMusk.png';
+import Header from '@/components/Header';
 
 const booleanArray: boolean[] = [true, false];
 
@@ -12,6 +12,7 @@ const genRandomBoolean = () => {
 
 const newsArray = [
   {
+    id: 1,
     headline: "Elon Musk threatens exit if he doesn't get his Trillion Dollar payday.",
     summary: 'The billionaire CEO threatens to leave Tesla if Tesla board members do not vote for his wishes in the upcoming shareholders vote...',
     imgSrc: elonMusk,
@@ -20,6 +21,7 @@ const newsArray = [
   },
 
   {
+    id: 2,
     headline: "Elon Musk threatens exit if he doesn't get his Trillion Dollar payday.",
     summary: 'The billionaire CEO threatens to leave Tesla if Tesla board members do not vote for his wishes in the upcoming shareholders vote.',
     imgSrc: elonMusk,
@@ -28,6 +30,7 @@ const newsArray = [
   },
 
   {
+    id: 3,
     headline: '"To Hell with Trump!" says Nigerian President Tinubu',
     summary: 'The billionaire CEO threatens to leave Tesla if Tesla board members do not vote for his wishes in the upcoming shareholders vote.',
     imgSrc: elonMusk,
@@ -36,6 +39,7 @@ const newsArray = [
   },
 
   {
+    id: 4,
     headline: "Elon Musk threatens exit if he doesn't get his Trillion Dollar payday.",
     summary: 'The billionaire CEO threatens to leave Tesla if Tesla board members do not vote for his wishes in the upcoming shareholders vote.',
     imgSrc: elonMusk,
@@ -44,6 +48,7 @@ const newsArray = [
   },
 
   {
+    id: 5,
     headline: "Elon Musk threatens exit if he doesn't get his Trillion Dollar payday.",
     summary: 'The billionaire CEO threatens to leave Tesla if Tesla board members do not vote for his wishes in the upcoming shareholders vote.',
     imgSrc: elonMusk,
@@ -54,19 +59,18 @@ const newsArray = [
 
 export default function Home() {
   return (
-    <>
-      <header className='w-full'>
-        <Navbar />
-        <div className='mt-2 w-full h-9 bg-linear-to-r from-black to-gray-900'>{Date().slice(0, 10)}</div>
-      </header>
+    <div className='max-w-[1000px] flex flex-col gap-8'>
+      <Header />
 
       <main>
         <MajorNews/>
 
-        {newsArray.map((news) => <News key={news.summary} headline={news.headline} summary={news.summary} imgSrc={news.imgSrc} imgAlt={news.imgAlt} imgLeft={news.imgLeft} />)}
+        {newsArray.map((news) => <News key={news.id} headline={news.headline} summary={news.summary} imgSrc={news.imgSrc} imgAlt={news.imgAlt} imgLeft={news.imgLeft} />)}
       </main>
 
-      <footer>&copy; News Pro {new Date().getFullYear()}</footer>
-    </>
+      <footer className='bg-gray-900 p-2 rounded-sm'>
+        &copy; News Pro {new Date().getFullYear()}
+      </footer>
+    </div>
   );
 }

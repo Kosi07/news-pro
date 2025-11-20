@@ -1,9 +1,16 @@
+'use client';
 
-const Navbar = () => {
-  function HamburgerIcon({ color }){
+import { Dispatch, SetStateAction} from 'react';
+
+const Navbar = ({ setOpenAside } : {setOpenAside: Dispatch<SetStateAction<boolean>>}) => {
+  function HamburgerIcon({ color } : {color: String}){
     return(
       <svg 
-        className={`w-10 h-9/10 ${color}`}
+        className={`w-10 h-9/10 ${color} 
+                    hover:cursor-pointer hover:text-gray-50 active:text-white`}
+        onClick={()=>{
+          setOpenAside(true)
+        }}
         viewBox='0 0 24 24' 
         fill='none' 
         stroke='currentColor'
@@ -15,10 +22,11 @@ const Navbar = () => {
     )
   }
 
-  function Profile({color}){
+  function Profile({ color } : {color: String}){
     return(
       <svg 
-        className={`w-10 h-9/10 ${color}`}
+        className={`w-10 h-9/10 ${color}
+                    hover:cursor-pointer hover:text-gray-50 active:text-white`}
         viewBox='0 0 24 24' 
         fill='none' 
         stroke='currentColor'
